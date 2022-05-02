@@ -1,0 +1,43 @@
+<?xml version ="1.0"?>
+<sdf version="1.6">
+  <model name="drone_world">
+    <pose>-3.14159265359 4 0  1.57079632679 0 0</pose>
+    <static>true</static>
+    
+
+    <link name="world1">
+      <collision name="colision2">
+        <geometry>
+          <mesh>
+            <uri>model://drone_world/meshes/world1.dae</uri>
+          </mesh> 
+        </geometry>
+      </collision>
+
+      <visual name="visual2">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://drone_world/meshes/world1.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://drone_world/materials/scripts</uri>
+            <uri>model://drone_world/materials/textures</uri>
+            <name>aruco/diffuse</name>
+          </script>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+          <specular>0 0 0 1</specular>
+          <emissive>1 1 1 0</emissive>
+          <shader type='vertex'>
+            <normal_map>__default__</normal_map>
+          </shader>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+</sdf>
